@@ -8,15 +8,22 @@
 </head>
 <body>
 	
-	<table range='1'>
-		<tr>
-		<% %>
+	<table border=" ">
+		<%
+			int i = 1;
+			while (i <= 10) {
+		%>
+				<tr>
+					<td><%=i%>번</td>
+				</tr>
+				
+		<% 		
+				i++;
+				
+			}
 		
-			<th></th>
+		%>
 		
-		</tr>
-	
-	
 	</table>
 
 
