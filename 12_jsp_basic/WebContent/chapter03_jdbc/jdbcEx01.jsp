@@ -28,7 +28,7 @@
 		Connection conn = null; 	// "java.sql.Connection" import 할 것.
 		
 		// forName 생성
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");		//선언 
 		
 		// DB 연결 정보 > "jdbc:mysql://db server ip:port number/(connection)database name?option"
 		String url = "jdbc:mysql://localhost:3306/JDBC_EX?serverTimezone=Asia/Seoul";
