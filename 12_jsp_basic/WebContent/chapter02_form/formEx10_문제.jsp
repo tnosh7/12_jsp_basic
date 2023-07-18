@@ -4,6 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <title>연습문제</title>
+<script>
+
+	function sendData(){
+		document.f.submit();
+	}
+	function sendReset(){
+		return false;
+	}
+
+</script>
 </head>
 <body>
 
@@ -14,7 +24,8 @@
 		- 아래의 폼 전송 데이터를 formEx10Pro_정답.jsp에서 화면에 출력해보시오.		
 	--%>
 
-	<form>
+	<form action="formEx10Pro_정답.jsp" method="post" name="f">
+	
 		<fieldset>
   			<legend>비회원 주문 정보 입력</legend>
   			<p>
@@ -61,8 +72,8 @@
 	        	 <span style="color:red"> * </span>개인정보 수집 동의 <input type="checkbox" name="agreePrivateInform" value="y">
 	        </p>
 	        <p>
-	        	<input type="submit" value="구매하기">
-	        	<input type="reset" value="다시쓰기">
+	        	<input type="submit" value="구매하기" onclick="sendData();">
+	        	<input type="reset" value="다시쓰기" onclick="sendReset();">
 	        </p>
          </fieldset>
 	</form>

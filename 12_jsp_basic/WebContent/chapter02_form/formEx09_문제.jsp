@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>연습문제</title>
+<script>
+	
+	function sendData(){
+		
+		document.f.submit;
+	}
+	
+	function sendReset(){
+		
+		return false;
+		
+	}
+</script>
 </head>
 <body>		
 			
@@ -14,25 +27,25 @@
 	
 	--%>			
 	
-	<form>
+	<form action="formEx09Pro_정답.jsp" method="post" name="f">
 		<fieldset>
 			<legend>회원가입 폼</legend>
-			<p>아이디 :   <input type="text" /></p>
-			<p>비밀번호 : <input type="password" /></p>
-			<p>이름 :     <input type="text" /></p>
-			<p>나이 :     <input type="text" /></p>
+			<p>아이디 :   <input type="text" name="id"/></p>
+			<p>비밀번호 : <input type="password" name="password"/></p>
+			<p>이름 :     <input type="text" name="name"/></p>
+			<p>나이 :     <input type="text" name="age"/></p>
 			<p>
-				성별 : <input type="radio" value="m"/>남자
-			   		   <input type="radio" value="f"/>여자
+				성별 : <input type="radio" value="m" name="gender"/>남자
+			   		   <input type="radio" value="f" name="gender"/>여자
 			</p>
 			<p>
-				취미 : <input type="checkbox" value="운동"/>운동
-					   <input type="checkbox" value="잠자기"/>잠자기
-					   <input type="checkbox" value="공부하기"/>공부하기
+				취미 : <input type="checkbox" value="운동" name="hobbies"/>운동
+					   <input type="checkbox" value="잠자기" name="hobbies"/>잠자기
+					   <input type="checkbox" value="공부하기" name="hobbies"/>공부하기
 			</p>
 			<p>
 				가고 싶은 여행지는
-				<select>
+				<select name="travel">
 					<option>괌</option>
 					<option>다낭</option>
 					<option>나트랑</option>
@@ -43,11 +56,11 @@
 			</p>
 			<p>
 				메모<br/>
-				<textarea rows="10" cols="50" ></textarea>
+				<textarea rows="10" cols="50" name="meno"></textarea>
 			</p>
 			<p>
-				<input type="submit" value="회원가입"/>
-				<input type="reset" value="다시쓰기"/>
+				<input type="submit" value="회원가입" onclick="sendData();"/>
+				<input type="reset" value="다시쓰기" onclick="sendReset();"/>
 			</p>
 		</fieldset>
 	</form>
