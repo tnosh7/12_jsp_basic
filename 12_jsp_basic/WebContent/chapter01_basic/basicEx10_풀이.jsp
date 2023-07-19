@@ -19,11 +19,27 @@
 	%>
 	
 	<table border="1">
-		<tr>
-			<td></td>
-		
+	<% 		
+		for(int i = 2; i < 10; i++) {
+	%>
+		<tr align="center">
+			<th colspan="2"><%=i %>단</th>
 		</tr>
+	<% 
+			for(int j = 1; j <=9; j++) {
+
+	%>
+				<tr align="center">
+					<td><%=i %> * <%=j %></td>
+					<td><%=i*j %></td>
+				</tr>
+	<%
+			}
+		}
 	
+	%>
+
+				
 	</table>
 </body>
 </html>
