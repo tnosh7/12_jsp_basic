@@ -24,23 +24,36 @@
 	
 	
 	<%
-		// 데이터베이스를 연결하기 위한 객체 
-		Connection conn = null; 	// "java.sql.Connection" import 할 것.
-		
-		// forName 생성
-		Class.forName("com.mysql.cj.jdbc.Driver");		//선언 
-		
-		// DB 연결 정보 > "jdbc:mysql://db server ip:port number/(connection)database name?option"
-		String url = "jdbc:mysql://localhost:3306/JDBC_EX?serverTimezone=Asia/Seoul";
-		// DB 연결 계정
-		String user    = "root";
-		// DB 연결 비밀번호
-		String password  = "1234";
-		
-		
-		conn = DriverManager.getConnection(localhost:3306, root, 1234);  // "java.sql.DriverManager" import 할 것.
+			
+			// 데이터베이스를 연결하기 위한 객체 
+			Connection conn = null; 	// "java.sql.Connection" import 할 것.
+			
+		try {
+			
+			// forName 생성
+			Class.forName("com.mysql.cj.jdbc.Driver");		//선언 
+			
+			// DB 연결 정보 > "jdbc:mysql://db server ip:port number/(connection)database name?option"
+			String url = "jdbc:mysql://localhost:3306/JDBC_EX?serverTimezone=Asia/Seoul";
+			// DB 연결 계정
+			String user    = "root";
+			// DB 연결 비밀번호
+			String password  = "1234";
+			
+			
+			conn = DriverManager.getConnection(url, user, password);  // "java.sql.DriverManager" import 할 것.
+			System.out.println("연결에 성공하였습니다.");
+			
+		} catch(Exception e ) {
+			e.printStackTrace();
+			System.out.println("연결에 실패하였습니다.");
+		} finally {
+			// 데이터베이스 연동 종료 
+			conn.close();
+		}
 	
-	
+		
 	%>
+	
 </body>
 </html>
