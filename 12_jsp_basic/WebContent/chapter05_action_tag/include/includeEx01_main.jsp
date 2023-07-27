@@ -22,7 +22,7 @@
 	
  	<jsp:include page="includeEx01_header.jsp" />
  
- 	<jsp:include page="includeEx01_body2.jsp" />
+ 	<jsp:include page="includeEx01_body1.jsp" />
  	
  	<jsp:include page="includeEx01_footer.jsp"/>
  
