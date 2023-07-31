@@ -70,6 +70,12 @@
 	<p>${num1 != num2} , ${num1 ne num2}</p>	<!-- Not Equal -->
 	<hr>
 	
+	<h3>논리 연산자</h3>
+	<p>${num1 > num2 && name == "Tim" } , ${num1 > num2 and name == "Tim" }</p> 
+	<p>${num1 > num2 || name == "Tim" } , ${num1 > num2 or name == "Tim" }</p>
+	<p>${!(name == "Tim") } , ${not(name == "Tim") }</p>
+	<hr>
+	
 	<h3>배열형 데이터 타입</h3>
 	<p>${list1 == null} , ${list1 != null}</p>
 	<p>${empty list2 } ,  ${not empty list2 }</p>
