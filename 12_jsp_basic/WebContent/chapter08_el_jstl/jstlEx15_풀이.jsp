@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +20,35 @@
 	 
 	<table border="1">
 		<tr>
-			<td>상품코드</td>
-			<td>상품이름</td>
-			<td>부서코드</td>
-			<td>부서이름</td>
-			<td>관리자이름</td>
+			<th>상품코드</th>
+			<th>상품이름</th>
+			<th>부서코드</th>
+			<th>부서이름</th>
+			<th>관리자코드</th>
+			<th>관리자이름</th	>
 		</tr>
+		
+		
+		
+		<tr>
+			<c:choose>
+				<c:when test="${empty productList }">
+					<th colspan="5">
+						조회된 상품이 없습니다.
+					</th>
+				</c:when>
+			<c:otherwise>
+				<c:forEach var="pdList" items="${productList }">
+						<td>${pdList.pdCd }</td>
+						<td>${pdList.pdNm } </td>
+						<td>${pdList.deptCd } </td>
+						<td>${pdList.deptNm } </td>
+						<td>${pdList.mgrCd } </td>
+						<td>${pdList.mgrNm } </td>
+					</c:forEach>	
+				</c:otherwise>
+				</tr>
+				</c:choose>
 	</table> 
 	
 </body>

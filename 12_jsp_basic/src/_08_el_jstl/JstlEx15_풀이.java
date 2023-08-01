@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import _05_bean.ProductBean;
 
-@WebServlet("/jstlEx15_정답예시")
+@WebServlet("/jstlEx15_풀이")
 public class JstlEx15_풀이 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -34,7 +34,7 @@ public class JstlEx15_풀이 extends HttpServlet {
 		
 		request.setAttribute("productList" , productList);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx15_정답예시.jsp"); 
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx15_풀이.jsp"); 
 		dis.forward(request, response);
 		
 	}

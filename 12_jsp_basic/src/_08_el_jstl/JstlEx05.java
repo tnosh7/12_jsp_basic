@@ -1,8 +1,6 @@
 package _08_el_jstl;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,26 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jstlEx07_풀이")
-public class JstlEx07_풀이 extends HttpServlet {
-	
+@WebServlet("/jstlEx05")
+public class JstlEx05 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		Random ran = new Random();
-		
-		int r = ran.nextInt(3);
-		
-		String value = "";
-		if (r == 0) value = "가위";
-		else if (r == 1) value = "바위";
-		else value= "보";
-		
-		String[] rn = {"가위", "바위","보"};
-		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx07_정답예시.jsp"); 
+		request.setAttribute("fileName" , "test_file.png");
+	
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx05.jsp"); 
 		dis.forward(request, response);
 		
 	}
