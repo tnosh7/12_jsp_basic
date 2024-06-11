@@ -20,7 +20,7 @@
 		      
 	--%>
 	
-	<form action="formEx05Pro_정답.jsp" method="post">
+	<form action="formEx05Pro_풀이.jsp" method="post">
 		<fieldset>
 			<legend>숫자 1 * 숫자 2 = 정답</legend>
 			<p>

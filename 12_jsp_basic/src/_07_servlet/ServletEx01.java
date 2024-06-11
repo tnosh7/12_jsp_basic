@@ -49,7 +49,7 @@ public class ServletEx01 extends HttpServlet {		// Http 통신이 가능한 Http
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 아래의 dispatcher에 명시된 jsp파일로 포워딩 한다.
-		RequestDispatcher dis= request.getRequestDispatcher("chapter07_servlet/servletEx01.jsp");  // WebContent 하위 경로부터 기술한다.
+		RequestDispatcher dis= request.getRequestDispatcher("chapter07_servlet/servletEx01Action.jsp");  // WebContent 하위 경로부터 기술한다.
 		dis.forward(request, response);
 	}
 	
@@ -64,7 +64,6 @@ public class ServletEx01 extends HttpServlet {		// Http 통신이 가능한 Http
 		System.out.println();
 		
 		// > 비즈니스 로직 > DAO > MySQL
-		
 		RequestDispatcher dis = request.getRequestDispatcher("chapter07_servlet/servletEx01Action.jsp");
 		dis.forward(request, response);
 	}

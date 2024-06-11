@@ -22,7 +22,7 @@
 		String dbPw = "1234";
 	%>
    
-	<form action="formEx04Pro_정답.jsp" method="post">
+	<form action="formEx04Pro_풀이.jsp" method="post">
 		<fieldset>
 			<legend>로그인</legend>
 			<p>아이디 : <input type="text" name="id" /></p>

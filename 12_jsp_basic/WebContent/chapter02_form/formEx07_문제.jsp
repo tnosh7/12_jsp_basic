@@ -23,7 +23,7 @@
 		
 	--> 
 
-	<form action="formEx07Pro_정답.jsp" method="post" name="f"> 
+	<form action="formEx07Pro_풀이.jsp" method="post" name="f"> 
 		<p>값 1: <input type="number" name="num1" ></p>
 		<p>값 2: <input type="number" name="num2" ></p>
 		<p>값 3: <input type="number" name="num3" ></p>
